@@ -1,0 +1,9 @@
+{
+    "emailInput": "[for='email'] > .login__input",
+    "passwordlInput": "[for='pwd'] > .login__input",
+    "loginButton": ".login__button",
+    "days": ".page-nav__day",
+    "filmTitle": ".conf-step__movie-title",
+    "seats": ".buying-scheme__chair.buying-scheme__chair_standart:not(.buying-scheme__chair_taken):not(.buying-scheme__chair_selected)",
+    "bookingButton": ".acceptin-button"
+  }

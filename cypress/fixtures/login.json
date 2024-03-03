@@ -1,0 +1,11 @@
+{
+    "happypath": {
+        "login": "qamid@qamid.ru",
+        "password": "qamid"
+    },
+    
+    "sadpath": {
+        "login": "login@unsuccess.ru",
+        "password": "unsuccess_password"
+    }
+}
