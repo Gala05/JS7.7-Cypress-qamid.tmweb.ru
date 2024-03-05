@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:booking:chrome": "npx cypress run --record --spec \"cypress/e2e/booking.cy.js\" --group booking:chrome --browser chrome",
+    "test:bookingAdm:chrome": "npx cypress run --record --spec \"cypress/e2e/bookingAdm.cy.js\" --group bookingAdm:chrome --browser chrome",
+    "test:login:chrome": "npx cypress run --record --spec \"cypress/e2e/login.cy.js\" --group login:chrome --browser chrome",
+    "test:parallel:chrome": "run-p -c test:booking:chrome test:bookingAdm:chrome test:login:chrome",
+    "test:booking:edge": "npx cypress run --record --spec \"cypress/e2e/booking.cy.js\" --group booking:edge --browser edge",
+    "test:bookingAdm:edge": "npx cypress run --record --spec \"cypress/e2e/bookingAdm.cy.js\" --group bookingAdm:edge --browser edge",
+    "test:login:edge": "npx cypress run --record --key 84767063-8d5b-4d91-93f4-31ef96c2a26b --spec \"cypress/e2e/login.cy.js\" --group login:edge --browser edge",
+    "test:parallel:edge": "run-p -c test:booking:edge test:bookingAdm:edge test:login:edge",
+    "test:parallel:all": "run-p -c test:parallel:chrome test:parallel:edge"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.6"
+    "cypress": "^13.6.6",
+    "npm-run-all": "^4.1.5"
   }
 }
